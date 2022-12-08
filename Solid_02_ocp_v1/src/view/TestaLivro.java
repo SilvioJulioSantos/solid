@@ -1,7 +1,7 @@
 package view;
 
+import Controller.PersistenciaEmBD;
 import model.Fatura;
-import Controller.ImpressaoDeFatura;
 import model.Livro;
 
 public class TestaLivro {
@@ -14,11 +14,11 @@ public class TestaLivro {
         // Será feito o calculo da fatura da compra realizada do livro1 que é passado como paramento
         Fatura fatura1 = new Fatura( livro1,2,3.57,1.36);
 
-        // Recebendo os dados da fatura1 como paramento para ser processada
-        ImpressaoDeFatura faturaLivroFatura1 = new ImpressaoDeFatura(fatura1);
 
-        //Gerando a impressão da fatura1, refrente a compra realizada do livr1
-        faturaLivroFatura1.imprimir();
+        //Persitindo a fatura no BD(Banco de Dados)
+        PersistenciaEmBD persistenciaEmBD1 = new PersistenciaEmBD(fatura1);
+        //Salvando a fatura no BD
+        persistenciaEmBD1.salvar(fatura1);
 
     }
 }

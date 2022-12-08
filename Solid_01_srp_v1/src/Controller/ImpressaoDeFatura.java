@@ -1,4 +1,6 @@
-package model;
+package Controller;
+
+import model.Fatura;
 
 public class ImpressaoDeFatura {
 
@@ -14,5 +16,6 @@ public class ImpressaoDeFatura {
         System.out.println("Porcentagem de desconto: " + fatura.getPorcDesconto());
         System.out.println("Procentagem de imposto: " + fatura.getPorcImposto());
         System.out.println("Total: " + fatura.getTotal());
+        //Realizanod teste 
     }
 }
