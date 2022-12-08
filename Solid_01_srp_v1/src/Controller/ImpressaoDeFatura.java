@@ -1,4 +1,6 @@
-package model;
+package Controller;
+
+import model.Fatura;
 
 public class ImpressaoDeFatura {
 
